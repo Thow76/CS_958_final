@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
+import './models/registration.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyHomePage());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+@override
+class MyHomePage extends StatelessWidget {
+  final List<Registration> registration = [
+    Registration(
+      firstName: 'First Name',
+      surName: 'Surname',
+    ),
+  ];
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(debugShowCheckedModeBanner: false);
   }
 }
